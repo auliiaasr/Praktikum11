@@ -23,7 +23,7 @@ if (isset($_POST['create'])) {
     // validation
     if (empty($title)) {
         $alert = "failed";
-        $errorFakultas = "*Title cannot be empty!";
+        $errorTitle = "*Title cannot be empty!";
     }
     if (empty($description)) {
         $alert = "failed";
@@ -119,17 +119,17 @@ if (isset($_POST['create'])) {
             <!-- form -->
             <div class="form-group">
                 <label for="">Title</label>
-                <input type="text" class="form-control" name="title" placeholder="Title" required>
+                <input type="text" class="form-control" name="title" placeholder="Title">
                 <small class="form-text text-danger"><?= $errorTitle; ?></small>
             </div><br>
             <div class="form-group">
                 <label for="">Description</label>
-                <textarea class="form-control" name="description" placeholder="Description" required></textarea>
+                <textarea class="form-control" name="description" placeholder="Description"></textarea>
                 <small class="form-text text-danger"><?= $errorDescription; ?></small>
             </div><br>
             <div class="form-group">
                 <label for="">Release Year</label>
-                <input type="text" class="form-control" name="release_year" placeholder="Release Year" required>
+                <input type="text" class="form-control" name="release_year" placeholder="Release Year">
                 <small class="form-text text-danger"><?= $errorReleaseYear; ?></small>
             </div><br>
             <div class="form-group">
@@ -146,22 +146,22 @@ if (isset($_POST['create'])) {
             </div><br>
             <div class="form-group">
                 <label for="">Rental Duration (Days)</label>
-                <input type="number" class="form-control" name="rental_duration" placeholder="Rental Duration" required>
+                <input type="number" class="form-control" name="rental_duration" placeholder="Rental Duration">
                 <small class="form-text text-danger"><?= $errorRentalDuration; ?></small>
             </div><br>
             <div class="form-group">
                 <label for="">Rental Rate ($)</label>
-                <input type="number" class="form-control" name="rental_rate" placeholder="Rental Rate" step=".01" required>
+                <input type="number" class="form-control" name="rental_rate" placeholder="Rental Rate" step=".01">
                 <small class="form-text text-danger"><?= $errorRentalRate; ?></small>
             </div><br>
             <div class="form-group">
                 <label for="">Length (Minutes)</label>
-                <input type="number" class="form-control" name="length" placeholder="Length" required>
+                <input type="number" class="form-control" name="length" placeholder="Length">
                 <small class="form-text text-danger"><?= $errorLength; ?></small>
             </div><br>
             <div class="form-group">
                 <label for="">Replacement Cost ($)</label>
-                <input type="number" class="form-control" name="replacement_cost" placeholder="Replacement Cost" step=".01" required>
+                <input type="number" class="form-control" name="replacement_cost" placeholder="Replacement Cost" step=".01">
                 <small class="form-text text-danger"><?= $errorReplacementCost; ?></small>
             </div><br>
             <div class="form-group">
@@ -177,28 +177,28 @@ if (isset($_POST['create'])) {
             </div><br>
             <label for="">Special Features</label>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="special_features[]" value="Trailers" id="check">
-                <label class="form-check-label" for="check">
+                <input class="form-check-input" type="checkbox" name="special_features[]" value="Trailers" id="check0">
+                <label class="form-check-label" for="check0">
                     Trailers
                 </label>
             </div>
                 <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="special_features[]" value="Commentaries" id="check" checked>
-                <label class="form-check-label" for="check">
+                <input class="form-check-input" type="checkbox" name="special_features[]" value="Commentaries" id="check1">
+                <label class="form-check-label" for="check1">
                     Commentaries 
                 </label>
             </div>
                 <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="special_features[]" value="Deleted Scenes" id="check" checked>
-                <label class="form-check-label" for="check">
+                <input class="form-check-input" type="checkbox" name="special_features[]" value="Deleted Scenes" id="check2">
+                <label class="form-check-label" for="check2">
                     Deleted Scenes
                 </label>
             </div>
                 <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="special_features[]" value="Behind the Scenes" id="check" >
-                <label class="form-check-label" for="check">
+                <input class="form-check-input" type="checkbox" name="special_features[]" value="Behind the Scenes" id="check3">
+                <label class="form-check-label" for="check3">
                     Behind the Scenes
-                </label>
+                </label><br>
                 <small class="form-text text-danger"><?= $errorSpecialFeatures; ?></small>
             </div><br>
             <div class="d-grid gap-2">

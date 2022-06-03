@@ -16,8 +16,18 @@ if (isset($_POST['sort'])) :
                             <p class="card-text">Rating: <?= $row->rating; ?></p>
                         </div>
                         <div class="d-flex justify-content-end">
-                            <i class="fas fa-edit fa-lg text-primary mr-1"></i>
-                            <i class="fas fa-trash-alt fa-lg text-danger"></i>
+                            <!-- Button Edit -->
+                            <div class="col-2">
+                                <a href="edit.php?id=<?= $row->film_id ?>">
+                                    <i class="fas fa-edit fa-lg text-primary mr-1"></i>
+                                </a>
+                            </div>
+                            <!-- Button Delete -->
+                            <div class="col-2">
+                                <a href="delete.php?id=<?= $row->film_id ?>">
+                                    <i class="fas fa-trash-alt fa-lg text-danger"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>

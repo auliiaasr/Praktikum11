@@ -1,5 +1,5 @@
 <?php
-$server = false;
+$server = true;
 
 if ($server) {
     // SERVER //
