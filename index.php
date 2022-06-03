@@ -30,7 +30,7 @@
     <h1 class="text-light text-center">CINEPOLIS MOVIES</h1>
   </div>
   <div class="d-grid gap-2 d-md-flex justify-content-md-end me-lg-5 mb-lg-3">
-    <a class="btn btn-primary" type="button"><i class="fas fa-plus-circle me-1"></i> Create Movie</a>
+    <a href="create.php" class="btn btn-primary shadow" type="button"><i class="fas fa-plus-circle me-1"></i> Create Movie</a>
   </div>
   <aside>
     <!-- Sorting Card -->
